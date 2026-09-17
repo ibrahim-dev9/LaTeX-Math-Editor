@@ -44,7 +44,7 @@ export default function Header() {
         {/* Actions */}
         <div className="flex items-center gap-2">
           <a
-            href="https://github.com"
+            href="https://github.com/ibrahim-dev9/LaTeX-Math-Editor"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/80 rounded-lg border border-slate-200/80 dark:border-slate-800 transition-colors duration-150"
