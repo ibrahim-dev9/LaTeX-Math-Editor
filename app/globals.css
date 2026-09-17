@@ -118,3 +118,12 @@ select:focus {
   outline: none !important;
   box-shadow: 0 0 0 2px var(--accent-primary) !important;
 }
+
+/* Prevent auto-zoom on mobile when focusing inputs/textareas */
+@media screen and (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}

@@ -398,7 +398,7 @@ export default function CommonCommands({ onInsert }) {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search symbols (e.g. frac, matrix, sum)..."
-            className="w-full text-xs pl-8 pr-3 py-1.5 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 placeholder-slate-400 rounded-lg border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2196F3] transition-all"
+            className="w-full text-base sm:text-xs pl-8 pr-3 py-1.5 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 placeholder-slate-400 rounded-lg border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2196F3] transition-all"
           />
           {searchQuery && (
             <button

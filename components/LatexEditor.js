@@ -194,7 +194,7 @@ export default function LatexEditor({
             spellCheck={false}
             autoCapitalize="off"
             autoCorrect="off"
-            className="w-full p-3 bg-transparent text-blue-50 font-mono text-xs sm:text-sm leading-6 resize-none focus:outline-none placeholder-slate-600 overflow-y-auto selection:bg-[#2196F3]/60 selection:text-white"
+            className="w-full p-3 bg-transparent text-blue-50 font-mono text-base sm:text-sm leading-6 resize-none focus:outline-none placeholder-slate-600 overflow-y-auto selection:bg-[#2196F3]/60 selection:text-white"
             aria-label="LaTeX Code Editor"
           />
         </div>

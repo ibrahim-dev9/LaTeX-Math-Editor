@@ -8,6 +8,10 @@
   <img src="https://img.shields.io/badge/Primary_Color-%232196F3-2196F3?style=for-the-badge" alt="Primary Color" />
 </p>
 
+<p align="center">
+  <img src="./public/og-image.png" alt="LaTeX Math Editor Banner" width="100%" />
+</p>
+
 A modern, clean, and responsive single-page **LaTeX Math Editor** designed for developers, mathematicians, physicists, and students. Write equations, preview them in real time with high-precision mathematical typography, and export them directly to **PDF**, **Markdown (`.md`)**, or **high-resolution PNG images**.
 
 🔗 **Repository:** [https://github.com/ibrahim-dev9/LaTeX-Math-Editor](https://github.com/ibrahim-dev9/LaTeX-Math-Editor)

@@ -19,7 +19,8 @@ const jetbrainsMono = JetBrains_Mono({
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 5,
+  maximumScale: 1,
+  userScalable: false,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#090d16" },
@@ -27,35 +28,117 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "LaTeX Math Editor — Write, Preview & Export Math",
+  metadataBase: new URL("https://github.com/ibrahim-dev9/LaTeX-Math-Editor"),
+  title: {
+    default: "LaTeX Math Editor — Write, Preview & Export Math",
+    template: "%s | LaTeX Math Editor",
+  },
   description:
-    "A modern online LaTeX math editor with real-time mathematical previews and PDF, Markdown, and PNG export.",
+    "A modern, fast, and free online LaTeX math editor with real-time KaTeX rendering and instant export to PDF, Markdown (.md), and high-resolution PNG images. Features 100+ visual math symbols, dark mode, zoom, and fullscreen canvas.",
   keywords: [
-    "LaTeX",
-    "Math Editor",
-    "Equation Editor",
-    "KaTeX",
-    "Math Preview",
-    "PDF Export",
-    "Markdown Math",
-    "PNG Math",
-    "LaTeX online",
+    "LaTeX Math Editor",
+    "Online LaTeX Editor",
+    "KaTeX Equation Editor",
+    "Math Formula to PNG",
+    "LaTeX to PDF",
+    "Export Math Markdown",
+    "Mathematical Notation",
+    "Math Symbols Palette",
+    "Calculus Equations",
+    "Matrix Editor",
+    "Quadratic Formula LaTeX",
+    "LaTeX Preview Online",
+    "Ibrahim albayati",
+    "TeX Math Render",
   ],
-  authors: [{ name: "LaTeX Math Editor Team" }],
+  authors: [
+    {
+      name: "Ibrahim albayati",
+      url: "https://github.com/ibrahim-dev9",
+    },
+  ],
+  creator: "Ibrahim albayati",
+  publisher: "Ibrahim albayati",
+  category: "Developer Tools & Education",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "LaTeX Math Editor — Write, Preview & Export Math",
     description:
-      "A modern online LaTeX math editor with real-time mathematical previews and PDF, Markdown, and PNG export.",
-    type: "website",
-    locale: "en_US",
+      "Write mathematical expressions, preview them in real time with KaTeX, and export directly as PDF, Markdown, or PNG.",
+    url: "https://github.com/ibrahim-dev9/LaTeX-Math-Editor",
     siteName: "LaTeX Math Editor",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 675,
+        alt: "LaTeX Math Editor - Real-Time Equation Editor and Multi-Format Exporter",
+        type: "image/png",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "LaTeX Math Editor — Write, Preview & Export Math",
     description:
-      "A modern online LaTeX math editor with real-time mathematical previews and PDF, Markdown, and PNG export.",
+      "Write mathematical expressions, preview them in real time with KaTeX, and export directly as PDF, Markdown, or PNG.",
+    images: ["/og-image.png"],
+    creator: "@ibrahim_dev9",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "LaTeX Math Editor",
+  "url": "https://github.com/ibrahim-dev9/LaTeX-Math-Editor",
+  "description":
+    "A modern online LaTeX math editor with real-time mathematical previews and PDF, Markdown, and PNG export.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "All",
+  "image": "https://github.com/ibrahim-dev9/LaTeX-Math-Editor/raw/main/public/og-image.png",
+  "author": {
+    "@type": "Person",
+    "name": "Ibrahim albayati",
+    "url": "https://github.com/ibrahim-dev9",
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+  },
+  "featureList": [
+    "Real-time KaTeX mathematical equation rendering",
+    "Visual math symbols palette with drag & swipe categories",
+    "Export to high-resolution PNG, PDF, and Markdown (.md)",
+    "Fullscreen interactive math canvas with zoom controls",
+    "Dark and Light theme support with #2196F3 primary styling",
+  ],
 };
 
 export default function RootLayout({ children }) {
@@ -66,7 +149,12 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
